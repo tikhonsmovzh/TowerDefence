@@ -24,9 +24,9 @@ public class MoveByEnemy : MonoBehaviour
 
         _body.MovePosition(Vector3.MoveTowards(transform.position, Points[_curentPoint].transform.position, _speed * Time.fixedDeltaTime));
     }
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (col.gameObject.tag == "Castle")
+        if (collision.gameObject.tag == "Castle")
             Destroy(gameObject, 0);
     }
 }
