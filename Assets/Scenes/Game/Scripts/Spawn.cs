@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] MoveByEnemy Enemy;
-    [SerializeField] GameObject[] Points;
+    [SerializeField] private MoveByEnemy _enemy;
+    [SerializeField] private GameObject[] _points;
+    [SerializeField] private float _spawnTime;
 
     void Start()
     {
@@ -15,9 +16,11 @@ public class Spawn : MonoBehaviour
     {
         for (int i = 0; i < Num; i++)
         {
-            var Clone = Instantiate(Enemy, this.transform.position, Quaternion.identity);
-            Clone.Points = Points;
-            yield return new WaitForSeconds(0.9f);
+            var Clone = Instantiate(_enemy, this.transform.position, Quaternion.identity);
+
+            Clone.Points = _points;
+
+            yield return new WaitForSeconds(_spawnTime);
         }
     }
 }
