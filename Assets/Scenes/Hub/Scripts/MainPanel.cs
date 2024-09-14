@@ -9,4 +9,14 @@ public class MainPanel : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void Settings()
+    {
+        Debug.Log("Not Ready");
+    }
+
+    public void Qwit()
+    {
+        Application.Quit();
+    }
 }
