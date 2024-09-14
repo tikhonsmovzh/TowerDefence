@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Castle
+  - Enemy
+  - Bullet
+  - MainCastle
   layers:
   - Default
   - TransparentFX
