@@ -8,8 +8,7 @@ public class MoveByEnemy : MonoBehaviour
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _sens = 0.2f;
 
-    private int _curentPoint = 0;
-    public int _HP = 10;
+    private int _curentPoint = 0, _HP = 10;
 
     private Rigidbody2D _body;
 
