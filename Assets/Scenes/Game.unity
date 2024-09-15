@@ -207,28 +207,28 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 1
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &112421025 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969017411463371827, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
+  m_PrefabInstance: {fileID: 511365301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &252143049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7803609493693403925, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
   m_PrefabInstance: {fileID: 5052509289459482478}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &252143050 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7924626021036885137, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
-  m_PrefabInstance: {fileID: 5052509289459482478}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d60f0e1be9172241a354912bccdf13f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &375037813
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ PrefabInstance:
     - target: {fileID: 6275480372558793729, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
       propertyPath: MainCastle
       value: 
-      objectReference: {fileID: 252143050}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -730,7 +730,7 @@ PrefabInstance:
     - target: {fileID: 6275480372558793729, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
       propertyPath: MainCastle
       value: 
-      objectReference: {fileID: 252143050}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -798,9 +798,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 60
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 60
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -826,6 +826,22 @@ RectTransform:
   m_AnchoredPosition: {x: -240, y: -200}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &922602364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4441602765953727780, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
+  m_PrefabInstance: {fileID: 5052509289459482478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &922602367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4592957690499499763, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
+  m_PrefabInstance: {fileID: 5052509289459482478}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922602364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923601452
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1012,7 @@ GameObject:
   - component: {fileID: 1146210006}
   - component: {fileID: 1146210005}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HelthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1303,6 +1319,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238689103}
   m_CullTransparentMesh: 1
+--- !u!114 &1292216577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969017411463371827, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
+  m_PrefabInstance: {fileID: 794113731}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1348323616 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4773278933389518676, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
@@ -1429,6 +1456,7 @@ Transform:
   - {fileID: 1654497307}
   - {fileID: 252143049}
   - {fileID: 1962081591}
+  - {fileID: 2023137843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1403378949
@@ -1486,12 +1514,34 @@ PrefabInstance:
     - target: {fileID: 6275480372558793729, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
       propertyPath: MainCastle
       value: 
-      objectReference: {fileID: 252143050}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
+--- !u!114 &1450231998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969017411463371827, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
+  m_PrefabInstance: {fileID: 1726442246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1478124892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969017411463371827, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
+  m_PrefabInstance: {fileID: 1403378949}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1510839466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,7 +1554,7 @@ GameObject:
   - component: {fileID: 1510839469}
   - component: {fileID: 1510839468}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: TimeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1888,7 @@ PrefabInstance:
     - target: {fileID: 6275480372558793729, guid: 58f18a9ff542b9547aaf0d47c412df34, type: 3}
       propertyPath: MainCastle
       value: 
-      objectReference: {fileID: 252143050}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1990,7 +2040,7 @@ GameObject:
   - component: {fileID: 1772685582}
   - component: {fileID: 1772685581}
   m_Layer: 5
-  m_Name: Image
+  m_Name: HelthBarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2076,7 +2126,7 @@ GameObject:
   - component: {fileID: 1872518750}
   - component: {fileID: 1872518749}
   m_Layer: 5
-  m_Name: Image
+  m_Name: timeBarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2180,16 +2230,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962081590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce04e88b27973f4e8e53ade4a2d1ef4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ff8b9e9d12d2db46bdd8dbe306ed0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn:
-  - {fileID: 1348323616}
-  - {fileID: 441095504}
-  - {fileID: 1820345348}
+  _endCastle: {fileID: 922602364}
+  _waveCounText: {fileID: 1767282828}
+  _waveColdownSlider: {fileID: 857945922}
+  _waveColdownTime: 10
+  _spawns:
   - {fileID: 2030768498}
-  Slider: {fileID: 857945922}
-  Text: {fileID: 1767282828}
+  - {fileID: 1820345348}
+  - {fileID: 441095504}
+  - {fileID: 1348323616}
+  _enemyCount: 4
+--- !u!1 &2023137842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2023137843}
+  - component: {fileID: 2023137844}
+  m_Layer: 0
+  m_Name: CastleHPView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2023137843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023137842}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1382386650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023137844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023137842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29dbc2dfd6071c448992597e920d98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _castleDamadges:
+  - {fileID: 922602367}
+  - {fileID: 1292216577}
+  - {fileID: 112421025}
+  - {fileID: 1450231998}
+  - {fileID: 1478124892}
+  _helthBar: {fileID: 48441199}
 --- !u!1 &2028279718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,6 +2388,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1382386650}
     m_Modifications:
+    - target: {fileID: -4592957690499499763, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
+      propertyPath: MaxHP
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 713845995443675406, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
+      propertyPath: m_TagString
+      value: Castle
+      objectReference: {fileID: 0}
     - target: {fileID: 4441602765953727780, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
       propertyPath: m_Name
       value: MainCastle

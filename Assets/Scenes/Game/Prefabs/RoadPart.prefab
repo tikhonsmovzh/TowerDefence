@@ -308,8 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55a870614694754eba6c96f6efaf075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 5357182637111243619, guid: 64e6b6c864d0a7542a91030239beb404, type: 3}
-  _points:
+  _enemy: {fileID: 6079219411340065706, guid: 64e6b6c864d0a7542a91030239beb404, type: 3}
+  Points:
   - {fileID: 8421471253438596737}
   - {fileID: 5849755738799559159}
   - {fileID: 8587186055759275842}
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 6782579229899697135}
   - component: {fileID: 3528299040135783521}
   - component: {fileID: 6782734799270381349}
-  - component: {fileID: 6275480372558793729}
+  - component: {fileID: 969017411463371827}
   m_Layer: 0
   m_Name: Gates
   m_TagString: Castle
@@ -1938,7 +1938,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6275480372558793729
+--- !u!114 &969017411463371827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1947,7 +1947,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9160240357242339091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23df11eb6268a994dbba988dd0598bfd, type: 3}
+  m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCastle: {fileID: 7924626021036885137, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
+  MaxHP: 10
