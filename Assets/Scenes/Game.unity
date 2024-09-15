@@ -2236,7 +2236,7 @@ MonoBehaviour:
   _endCastle: {fileID: 922602364}
   _waveCounText: {fileID: 1767282828}
   _waveColdownSlider: {fileID: 857945922}
-  _waveColdownTime: 10
+  _waveColdownTime: 50
   _spawns:
   - {fileID: 2030768498}
   - {fileID: 1820345348}
