@@ -2236,7 +2236,7 @@ MonoBehaviour:
   _endCastle: {fileID: 922602364}
   _waveCounText: {fileID: 1767282828}
   _waveColdownSlider: {fileID: 857945922}
-  _waveColdownTime: 50
+  _waveColdownTime: 10
   _spawns:
   - {fileID: 2030768498}
   - {fileID: 1820345348}
@@ -2399,6 +2399,10 @@ PrefabInstance:
     - target: {fileID: 4441602765953727780, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
       propertyPath: m_Name
       value: MainCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441602765953727780, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
+      propertyPath: m_TagString
+      value: Castle
       objectReference: {fileID: 0}
     - target: {fileID: 7803609493693403925, guid: c202c5f1c768eb749ab5da57c274bc32, type: 3}
       propertyPath: m_LocalPosition.x

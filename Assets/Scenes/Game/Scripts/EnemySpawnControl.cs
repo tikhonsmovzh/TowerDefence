@@ -31,7 +31,7 @@ public class EnemySpawnControl : MonoBehaviour
         {
             _lastWaveTime = _time;
 
-            _waveColdownTime -= _waveCount % 2;
+            _waveColdownTime -= (_waveColdownTime > 3.0f ? _waveCount % 2 : 0);
 
             foreach (var spawn in _spawns)
             {

@@ -7,7 +7,6 @@ TagManager:
   - Castle
   - Enemy
   - Bullet
-  - MainCastle
   layers:
   - Default
   - TransparentFX
