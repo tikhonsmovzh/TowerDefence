@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private EnemyConroller _enemy;
+    [SerializeField] private EnemyController _enemy;
     public List<GameObject> Points;
     [SerializeField] private float _spawnTime;
 

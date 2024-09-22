@@ -3,13 +3,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class EnemyConroller : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public List<GameObject> Points { get; set; }
      
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _sens = 0.2f;
-    [SerializeField] private int _damage = 1;
+    [SerializeField] private Damaged _myState;
 
     private int _curentPoint = 0;
 
@@ -35,11 +35,15 @@ public class EnemyConroller : MonoBehaviour
 
         Damaged damage;
 
-        if(damage = collision.gameObject.GetComponent<Damaged>())
+        if (damage = collision.gameObject.GetComponent<Damaged>())
         {
-            damage.HP -= _damage;
-
+            damage.HP--;
             Destroy(this.gameObject);
         }
     }
+    public void Hit()
+    {
+        _myState.HP--;
+    }
+
 }

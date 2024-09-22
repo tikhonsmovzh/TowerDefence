@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2.2
   _sens: 0.2
-  _damage: 1
+  _myState: {fileID: -8999880921006225903}
 --- !u!114 &-8999880921006225903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,4 +219,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 10
+  MaxHP: 3
