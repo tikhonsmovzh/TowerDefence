@@ -35,7 +35,7 @@ public class EnemySpawnControl : MonoBehaviour
 
             foreach (var spawn in _spawns)
             {
-                StartCoroutine(spawn.SpawnEnemy(_enemyCount + (_waveCount / 2)));
+                StartCoroutine(spawn.SpawnEnemy(_enemyCount + (_waveCount / 2), (_waveCount > 9 ? (int)(_waveCount / 3) : 3)));
             }
 
             _waveCount++;

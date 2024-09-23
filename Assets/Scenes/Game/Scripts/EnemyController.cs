@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     public List<GameObject> Points { get; set; }
      
-    [SerializeField] private float _speed = 2f;
+    public float _speed = 2f;
     [SerializeField] private float _sens = 0.2f;
     [SerializeField] private Damaged _myState;
 

@@ -35,7 +35,7 @@ public class CastleHpView : MonoBehaviour
             _castleHp += i.HP;
         }
 
-        if (_castleDamadges[0].HP == 0)
+        if (_castleDamadges[0].HP <= 0)
         {
             Events.Dead();
             _helthBar.value = 0;
