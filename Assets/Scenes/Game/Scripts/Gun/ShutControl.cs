@@ -28,7 +28,7 @@ public class ShutControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_targetEnemy == null || (_targetEnemy.transform.position - transform.position).sqrMagnitude > _shootRange)
+        if (_targetEnemy == null || (_targetEnemy.transform.position - transform.position).magnitude > _shootRange)
         {
             _targetEnemy = GetTargetEnemy();
 
