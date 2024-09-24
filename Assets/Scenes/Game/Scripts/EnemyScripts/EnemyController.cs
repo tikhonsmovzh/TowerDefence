@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -8,6 +10,7 @@ public class EnemyController : MonoBehaviour
     public List<GameObject> Points { get; set; }
      
     public float _speed = 2f;
+    public CastleHpView Mony;
     [SerializeField] private float _sens = 0.2f;
     [SerializeField] private Damaged _myState;
 
@@ -44,6 +47,10 @@ public class EnemyController : MonoBehaviour
     public void Hit()
     {
         _myState.HP--;
+        if (_myState.HP == 0)
+        {
+            Mony.PlusSilver(1);
+        }
     }
 
 }

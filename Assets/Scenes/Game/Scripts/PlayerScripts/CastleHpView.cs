@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +12,9 @@ public class CastleHpView : MonoBehaviour
     [SerializeField] private Damaged[] _castleDamadges;
     [SerializeField] private Slider _helthBar;
     [SerializeField] private EventController Events;
-    private float _castleHp;
+    [SerializeField] private TextMeshProUGUI Gold;
+    [SerializeField] private TextMeshProUGUI Silver;
+    private float _castleHp, _silver, _gold;
     private static float _maxHp;
 
     private void Start()
@@ -22,11 +25,15 @@ public class CastleHpView : MonoBehaviour
             _castleHp += i.HP;
         }
         _maxHp = _castleHp;
+        _silver = 0;
+        _gold = 0;
     }
 
     void Update()
     {
         _helthBar.value = _castleHp / _maxHp;
+        Gold.text = _gold.ToString();
+        Silver.text = _silver.ToString();
 
         _castleHp = 0;
 
@@ -40,5 +47,15 @@ public class CastleHpView : MonoBehaviour
             Events.Dead();
             _helthBar.value = 0;
         }
+    }
+
+    public void PlusGold(int Value)
+    {
+        _gold += Value;
+    }
+
+    public void PlusSilver(int Value)
+    {
+        _silver += Value;
     }
 }

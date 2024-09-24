@@ -321,7 +321,7 @@ MonoBehaviour:
   - {fileID: 4306826558097859579}
   - {fileID: 2058413067442913925}
   - {fileID: 9160240357242339091}
-  _spawnTime: 0.8
+  _spawnTime: 0.2
 --- !u!1 &2001059655615976474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,4 +1950,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ff7544068d57a44958f8882a82deb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _iMustDead: 1
   MaxHP: 10

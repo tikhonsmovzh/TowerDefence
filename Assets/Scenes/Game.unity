@@ -2812,13 +2812,14 @@ MonoBehaviour:
   _endCastle: {fileID: 922602364}
   _waveCounText: {fileID: 1767282828}
   _waveColdownSlider: {fileID: 857945922}
-  _waveColdownTime: 20
+  _waveColdownTime: 50
   _spawns:
   - {fileID: 2030768498}
   - {fileID: 1820345348}
   - {fileID: 441095504}
   - {fileID: 1348323616}
   _enemyCount: 4
+  Mony: {fileID: 2023137844}
 --- !u!1 &2023137842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,7 +2832,7 @@ GameObject:
   - component: {fileID: 2023137844}
   m_Layer: 0
   m_Name: CastleHPView
-  m_TagString: Untagged
+  m_TagString: MainCastle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2871,6 +2872,8 @@ MonoBehaviour:
   - {fileID: 1478124892}
   _helthBar: {fileID: 48441199}
   Events: {fileID: 177225886}
+  Gold: {fileID: 605025982}
+  Silver: {fileID: 1238689105}
 --- !u!1 &2028279718
 GameObject:
   m_ObjectHideFlags: 0

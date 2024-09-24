@@ -11,6 +11,7 @@ public class EnemySpawnControl : MonoBehaviour
     [SerializeField] private float _waveColdownTime;
     [SerializeField] private Spawn[] _spawns;
     [SerializeField] private int _enemyCount;
+    [SerializeField] private CastleHpView Mony;
 
     private int _waveCount = 0;
 
@@ -35,7 +36,7 @@ public class EnemySpawnControl : MonoBehaviour
 
             foreach (var spawn in _spawns)
             {
-                StartCoroutine(spawn.SpawnEnemy(_enemyCount + (_waveCount / 2), (_waveCount > 9 ? (int)(_waveCount / 3) : 3)));
+                StartCoroutine(spawn.SpawnEnemy(_enemyCount + (_waveCount / 2), (_waveCount > 9 ? (int)(_waveCount / 3) : 3), Mony));
             }
 
             _waveCount++;
