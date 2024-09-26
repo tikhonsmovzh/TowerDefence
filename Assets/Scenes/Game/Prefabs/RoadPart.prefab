@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 5256079037793170427}
   m_Layer: 0
   m_Name: Paltform (4)
-  m_TagString: Untagged
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 2038457483332967306}
   m_Layer: 0
   m_Name: Paltform (3)
-  m_TagString: Untagged
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 3277567237463829267}
   m_Layer: 0
   m_Name: Paltform (0)
-  m_TagString: Untagged
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 1702749969816841736}
   m_Layer: 0
   m_Name: Paltform (2)
-  m_TagString: Untagged
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 7190991235399818933}
   m_Layer: 0
   m_Name: Paltform (1)
-  m_TagString: Untagged
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
