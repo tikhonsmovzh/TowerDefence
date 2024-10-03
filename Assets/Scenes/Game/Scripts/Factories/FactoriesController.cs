@@ -22,7 +22,7 @@ public class FactoriesController : MonoBehaviour
         _nowTime -= Time.deltaTime;
         if (_nowTime <= 0)
         {
-            Mony.PlusGold(Efficiency);
+            Mony.SetGold(Efficiency);
             _overheatNow++;
             if (_hot)
                 _hot = false;

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4bc447273592d4b9d8ff0d894107bb, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  SimpleObject: {fileID: 0}
+  SimpleObject: {fileID: 2164115477258408923, guid: e3c76cff249754944a8f9a14572aee8b, type: 3}
   WorldObject: {fileID: 2164115477258408923, guid: 6cc7063ad2be5434c937932a509baec6, type: 3}
-  CostSilver: 0
-  CostGold: 0
+  CostSilver: 20
+  CostGold: 20
+  size: {x: 5, y: 5}

@@ -1,6 +1,7 @@
 using AirFishLab.ScrollingList;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,7 +12,7 @@ public class BuildControl : MonoBehaviour, IPointerDownHandler
     [SerializeField] private Building _selectedBuilding;
     [SerializeField] private string _greenTag;
     [SerializeField] private float _buildStep;
-
+    [SerializeField] private CastleHpView _hpView;
     public void AddBuildingsToPanel(IEnumerable<Building> buildings)
     {
         _buildedPanel.AddRange(buildings);
@@ -57,6 +58,14 @@ public class BuildControl : MonoBehaviour, IPointerDownHandler
         if (!isGreen(res))
             return;
 
+        if (_hpView.GetGold() < _selectedBuilding.CostGold) // так сделано, потому что, по неизвестным причинам 
+            return; // && не работает и серебро уходит в минус. . .
+
+        if (_hpView.GetSilver() < _selectedBuilding.CostSilver)
+            return;
+
         Instantiate(_selectedBuilding.WorldObject, vec, Quaternion.identity);
+        _hpView.SetGold(-_selectedBuilding.CostGold);
+        _hpView.SetSilver(-_selectedBuilding.CostSilver);
     }
 }

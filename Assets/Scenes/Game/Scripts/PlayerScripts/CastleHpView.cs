@@ -49,13 +49,14 @@ public class CastleHpView : MonoBehaviour
         }
     }
 
-    public void PlusGold(int Value)
-    {
-        _gold += Value;
-    }
+    public void SetGold(int Value)
+    { _gold += Value;}
 
-    public void PlusSilver(int Value)
-    {
-        _silver += Value;
-    }
+    public void SetSilver(int Value)
+    { _silver += Value; }
+
+    public float GetGold()
+    { return _gold; }
+    public float GetSilver()
+    { return _silver; }
 }

@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
         _myState.HP--;
         if (_myState.HP == 0)
         {
-            Mony.PlusSilver(1);
+            Mony.SetSilver(1);
         }
     }
 
