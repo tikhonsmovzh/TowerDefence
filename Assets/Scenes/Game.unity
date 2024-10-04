@@ -329,6 +329,7 @@ MonoBehaviour:
   _greenTag: Green
   _buildStep: 0
   _hpView: {fileID: 2023137844}
+  _buildingTag: Building
 --- !u!114 &366267523
 MonoBehaviour:
   m_ObjectHideFlags: 0

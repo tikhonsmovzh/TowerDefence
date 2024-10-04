@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleObject: {fileID: 2164115477258408923, guid: e3c76cff249754944a8f9a14572aee8b, type: 3}
   WorldObject: {fileID: 2164115477258408923, guid: 6cc7063ad2be5434c937932a509baec6, type: 3}
-  CostSilver: 20
-  CostGold: 20
+  CostSilver: 0
+  CostGold: 0
   size: {x: 5, y: 5}
