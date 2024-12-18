@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class Damaged : MonoBehaviour
 {
-    [SerializeField] private bool _iMustDead = true;
+    [SerializeField] private bool _canDie = true;
 
     public int MaxHP = 0;
 
-    public Action<Damaged> OnDamadge;
+    public Action<Damaged> OnDamage;
     public Action<Damaged> OnDeath;
 
     private int _currentHp;
@@ -17,16 +17,16 @@ public class Damaged : MonoBehaviour
         get => _currentHp;
 
         set
-        {
-            _currentHp = Mathf.Min(MaxHP, value);
+        {   // Это полный пиздец я обязательно это перепишу но не сейчас
+            _currentHp = Mathf.Min(MaxHP, value); 
 
-            if (_currentHp <= 0 && _iMustDead)
+            if (_currentHp <= 0 && _canDie) // if you died and are not in god mode
             {
-                Destroy(gameObject);
-                OnDeath?.Invoke(this);
+                Destroy(gameObject);    // you die
+                OnDeath?.Invoke(this);  // death message
             }
 
-            OnDamadge?.Invoke(this);
+            OnDamage?.Invoke(this);
         }
     }
 

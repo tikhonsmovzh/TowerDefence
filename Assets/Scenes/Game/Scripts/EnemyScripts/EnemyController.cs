@@ -7,50 +7,49 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyController : MonoBehaviour
 {
-    public List<GameObject> Points { get; set; }
+    public List<GameObject> Target { get; set; }
      
-    public float _speed = 2f;
-    public CastleHpView Mony;
-    [SerializeField] private float _sens = 0.2f;
-    [SerializeField] private Damaged _myState;
+    public float Speed = 2f;                      // Set enemy speed
+    private int _currentTargets = 0;              // Current target out of the list
+    public CastleHpView CastleMony;               // I dont know wtf this is :(
+    private Rigidbody2D _rbody; // Rigitbody component is used for detecting collisions
 
-    private int _curentPoint = 0;
+    [SerializeField] private float _range = 0.2f; // Enemy range for detecting targets
+    [SerializeField] private Damaged _myState;    // Current state
 
-    private Rigidbody2D _body;
 
     private void Awake()
     {
-        _body = GetComponent<Rigidbody2D>();
+        _rbody = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void Update() // Enemy brain loop
     {
-        if (Points[_curentPoint].IsDestroyed() || (Points[_curentPoint].transform.position - transform.position).sqrMagnitude < _sens)
-            _curentPoint += _curentPoint < Points.Count - 1 ? 1 : 0;
-
-        if(!Points[_curentPoint].IsDestroyed())
-            _body.MovePosition(Vector3.MoveTowards(transform.position, Points[_curentPoint].transform.position, _speed * Time.fixedDeltaTime));
+        if (Target[_currentTargets].IsDestroyed()) // if the enemy reaches and destroys its target
+            if (((Target[_currentTargets].transform.position - transform.position).sqrMagnitude < _range) //if the next target is in range
+            && (_currentTargets < Target.Count - 1)) _currentTargets++; // then set target to the next available
+        else  // if the target isnt reached yet continue moving
+            _rbody.MovePosition(Vector3.MoveTowards(transform.position, Target[_currentTargets].transform.position, Speed * Time.deltaTime));
     }
+
     void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag != "Castle")
-            return;
+    {   
+        if (!collision.gameObject.CompareTag("Castle")) 
+            return; // if the enemy colides with something else
 
-        Damaged damage;
+        Damaged EnemyDamaged;         // ?
 
-        if (damage = collision.gameObject.GetComponent<Damaged>())
+        if (EnemyDamaged = collision.gameObject.GetComponent<Damaged>()) // ??????
         {
-            damage.HP--;
-            Destroy(this.gameObject);
+            EnemyDamaged.HP--;        // ?
+            Destroy(this.gameObject); // ?
         }
     }
-    public void Hit()
+
+    public void Hit() // Decrease enemy hp amount if the it is hit
     {
         _myState.HP--;
-        if (_myState.HP == 0)
-        {
-            Mony.SetSilver(1);
-        }
+        if (_myState.HP < 1) CastleMony.SetSilver(1); // if the enemy dies then drop resources (silver)
     }
 
 }

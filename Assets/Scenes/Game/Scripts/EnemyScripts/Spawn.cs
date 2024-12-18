@@ -2,27 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyController _enemy;
-    public List<GameObject> Points;
-    [SerializeField] private float _spawnTime;
+    public List<GameObject> eTarget;
+    [SerializeField] private float _spawnCooldown;
 
-    public IEnumerator SpawnEnemy(int Num, int Speed, CastleHpView Mony)
+    public IEnumerator Spawn(int Amount, int eSpeed, CastleHpView CurrentMony)
     {
-        for (int i = 0; i < Num; i++)
+        for (int i = 0; i < Amount; i++)
         {
             var Clone = Instantiate(_enemy, this.transform.position, Quaternion.identity);
 
-            Clone.Points = Points;
+            Clone.Target = eTarget;
+            Clone.Speed = eSpeed;
+            Clone.CastleMony = CurrentMony;
 
-            Clone._speed = Speed;
+            _spawnCooldown = (float)(eSpeed / 3) - _spawnCooldown;
 
-            Clone.Mony = Mony;
-
-            _spawnTime = (float)(Speed / 3) - _spawnTime;
-
-            yield return new WaitForSeconds(_spawnTime);
+            yield return new WaitForSeconds(_spawnCooldown);
         }
     }
 }

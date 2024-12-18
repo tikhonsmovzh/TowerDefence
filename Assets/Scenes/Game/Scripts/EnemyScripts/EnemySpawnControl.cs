@@ -5,45 +5,48 @@ using UnityEngine.UI;
 
 public class EnemySpawnControl : MonoBehaviour
 {
-    [SerializeField] private GameObject _endCastle;
-    [SerializeField] private TextMeshProUGUI _waveCounText;
-    [SerializeField] private Slider _waveColdownSlider;
-    [SerializeField] private float _waveColdownTime;
-    [SerializeField] private Spawn[] _spawns;
-    [SerializeField] private int _enemyCount;
-    [SerializeField] private CastleHpView Mony;
+    [SerializeField] private GameObject _castleTarget;  
+    [SerializeField] private TextMeshProUGUI _wAmountText;  // Wave number (text UI)
+    [SerializeField] private Slider _wCooldownSld;          // Slider for wave cooldown
+    [SerializeField] private float _wCooldownTime;          // Cooldown until next wave
+    [SerializeField] private EnemySpawner[] _placedSpawners;// Initializing our spawners
+    [SerializeField] private int _eAmount;                  // Amount of enemies
+    [SerializeField] private CastleHpView EscMony;          // ?
 
-    private int _waveCount = 0;
+    private int _wAmount = 0;        // Current wave number
+    private float _currentTime = 0;  // Current elapsed time
+    private float _lastWaveTime = 0; // Time passed from previous wave (this/last)
+
+    private int _currentSpeed;       // Set speed for spawned enemies
+    private int _spawnAmount;        // Set amount of spawned enemies
 
     private void Awake()
     {
-        foreach (var spawn in _spawns)
-            spawn.Points.Add(_endCastle);
-    }
-
-    private float _time = 0;
-    private float _lastWaveTime = 0;
+        foreach (var NewEnemy in _placedSpawners)
+            NewEnemy.eTarget.Add(_castleTarget);
+    }   // Setting every new spawned enemy a target for destroing (our castle)
 
     private void Update()
     {
-        _time += Time.deltaTime;
+        _currentTime += Time.deltaTime; // Increase elapsed time
 
-        if(_time - _lastWaveTime > _waveColdownTime)
+        if(_currentTime - _lastWaveTime > _wCooldownTime) // if the next wave cooldown ended
         {
-            _lastWaveTime = _time;
+            _lastWaveTime = _currentTime; // Reset cooldown
+            if (_wCooldownTime > 3.0f) _wCooldownTime -= _wAmount % 2;
 
-            _waveColdownTime -= (_waveColdownTime > 3.0f ? _waveCount % 2 : 0);
+            _spawnAmount = _eAmount + (_wAmount / 2);
+            _currentSpeed = _wAmount / 3;
+            if(_currentSpeed > 3) _currentSpeed = 3; // Set a limit for the max enemy speed
 
-            foreach (var spawn in _spawns)
-            {
-                StartCoroutine(spawn.SpawnEnemy(_enemyCount + (_waveCount / 2), (_waveCount > 9 ? (int)(_waveCount / 3) : 3), Mony));
-            }
+            foreach (var EnemySpawner in _placedSpawners) // Spawn the enemies
+                StartCoroutine(EnemySpawner.Spawn(_spawnAmount, _currentSpeed, EscMony));
 
-            _waveCount++;
-
-            _waveCounText.text = _waveCount.ToString();
+            _wAmount++;                           // Increase the nex wave number
+            _wAmountText.text = _wAmount.ToString(); // Write the new wave number
         }
 
-        _waveColdownSlider.value = 1f - (_time - _lastWaveTime) / _waveColdownTime;
+        // Update the slider with relevant cooldown until next wave
+        _wCooldownSld.value = 1f - (_currentTime - _lastWaveTime) / _wCooldownTime;
     }
 }
